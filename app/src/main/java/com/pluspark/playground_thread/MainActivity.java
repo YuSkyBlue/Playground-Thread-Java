@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     MyHandler myHandler;
+    int value = 0;
     BackgroundThread backgroundThread;
     ReentrantLock lock = new ReentrantLock();
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     class BackgroundThread extends Thread {
-        int value = 0;
+
         volatile boolean running = true;
         volatile boolean interrupt = false;
 
